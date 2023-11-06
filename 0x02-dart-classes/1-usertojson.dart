@@ -1,15 +1,15 @@
-class User{
+class User {
   String name;
-  Int age;
+  int age;
   double height;
 
-    User({required this.name, required this.age, required this.height});
+  User({required this.name, required this.age, required this.height});
 
-  map <String, dynamic> toJson(){
+  Map toJson() {
     return {
-       'name': name,
-       'age': age,
-       'height': height,
+      'name': name,
+      'age': age,
+      'height': height,
     };
   }
 }
