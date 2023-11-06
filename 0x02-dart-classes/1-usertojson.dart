@@ -5,7 +5,7 @@ class User{
 
     User({required this.name, required this.age, required this.height});
 
-  map toJson(){
+  map <String, dynamic> toJson(){
     return {
        'name': name,
        'age': age,
