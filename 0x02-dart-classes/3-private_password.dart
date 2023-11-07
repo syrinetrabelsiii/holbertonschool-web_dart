@@ -1,17 +1,21 @@
 class Password {
-  String _password;
-  Password(this._password);
+  late String _password;
+  Password({required String password}) {
+    this._password = password;
+  }
 
   bool isValid() {
-    return ((_password.length >= 8) &&
-        (_password.length <= 16) &&
-        (_password.contains( RegExp(r'[A-Z]'))) &&
-        (_password.contains( RegExp(r'[a-z]'))) &&
-        (_password.contains( RegExp(r'[0-9]'))));
+    if (_password.length > 6 &&
+        _password.length < 18 &&
+        _password.contains(RegExp(r'[a-zA-Z]')) &&
+        _password.contains(RegExp(r'\d'))) {
+      return true;
+    }
+    return false;
   }
 
   @override
   String toString() {
-    return "Your Password is: $_password";
+    return "Your Password is: ${_password}";
   }
 }
