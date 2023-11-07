@@ -1,5 +1,6 @@
 class Password {
-  String _password = '';
+  String _password;
+  Password(this._password);
 
   bool isValid() {
     return ((_password.length >= 8) &&
@@ -11,6 +12,6 @@ class Password {
 
   @override
   String toString() {
-    return 'Your Password is: ${this._password}';
+    return "Your Password is: $_password";
   }
 }
